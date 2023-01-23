@@ -1,0 +1,19 @@
+body{
+    margin: 0px;
+}
+
+.header1{
+    background-color: black;
+    color: white;
+    list-style: none;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.header1 li:hover {
+    color: orange
+}
