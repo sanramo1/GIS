@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="utf-8">
     <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 3.1</title>
         <link rel="stylesheet" href="style.css">
-        <title>CSS Styling Web</title>
-        <style type="text/css">
-            .par1{
-                color: blueviolet;
+        <style>
+            #p3 {
+                background-color: rgb(22, 231, 168);
+                margin-top: 50px;
+                font-size: small;
             }
         </style>
     </head>
     <body>
-        <h1><b>Integración de estilos</b></h1>
-        <p class="par1">
-            Lololo
+        <h1>Integración de estilos</h1>
+        <p class="p1">En este ejercicio estamos viendo cómo podemos integrar los estilos de distintas 
+            formas. Este párrafo tiene los estilos definidos en un archivo externo.
+        </p>
+        <p style="font-size: 30px; background-color: blue; color: white">
+            Mientras que este los tiene definidos como atributos de la etiqueta HTML. 
+            Este tiene el fondo azul y el color de la letra es blanco.
+        </p>
+        <p id="p3">
+            Y este último, dentro de la etiqueta head del HTML. Está bastante separado del resto de párrafos, 
+            tiene la letra pequeña y el fondo azul-verdoso.
         </p>
     </body>
 </html>
