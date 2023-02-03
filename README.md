@@ -54,7 +54,7 @@ La estabilidad de los despliegues y actualizaciones dependen de no hacer cambios
 #------------------------------------------------------------------------------------#
 
 
-## Esta versión tiene 6 ficheros .tf y 2 ficheros .tfvars:
+## Contenido ficheros:
 
     - 1_variables_init.tf :
     	Inicializa las variables con los parámetros declarados en el fichero "terraform.tfvars"
