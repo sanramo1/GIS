@@ -7,8 +7,8 @@ Despliegue de entorno ArcGIS Enterprise, incluye creación de VPC con 2 subenets
 __Antes de ejecutar:__ 
 1. Crear Key Pair de acceso para la máquina de salto. 
 2. Crear 2 EIPs:
-	2.1. Para la máquina de salto.
-	2.2. Para la interfaz NAT del RDGW, requisito para la creación del stack de la VPC.
+2.1. Para la máquina de salto.
+2.2. Para la interfaz NAT del RDGW, requisito para la creación del stack de la VPC.
 
 ## Ejecución
 
@@ -24,6 +24,14 @@ UNA VEZ MODIFICADOS LOS PARÁMETROS NECESARIOS:
     4. terraform apply "xxxx.tfplan" 
 		Ejecuta la planificación.
 
+__Antes de ejecutar el despliegue adaptar los parámetros y los directorios de trabajo y path relativos.__
+
+    - terraform.tfvars :
+    	Este fichero tiene todas las variables que necesitan de modificación para adaptar al despliegue.
+
+    - certificate.tfvar:
+    	Contiene las secciones del certificado del ALB.
+
 ## Para borrar la configuración hecha o en caso de error y querer borrar los recursos creados, utilizar el comando:
 
     terraform destroy -var-file "certificate.tfvars"
@@ -32,16 +40,10 @@ UNA VEZ MODIFICADOS LOS PARÁMETROS NECESARIOS:
 
     Ctrl + C (2 veces)
 
+#------------------------------------------------------------------------------------#
+
 __NOTA:__
 Requisito haber creado previamente el KeyPair, Terraform no tiene la capacidad de generaralo, solo de importarlo.
-
-__Antes de ejecutar el despliegue adaptar los parámetros y los directorios de trabajo y path relativos.__
-
-    - terraform.tfvars :
-    	Este fichero tiene todas las variables que necesitan de modificación para adaptar al despliegue.
-
-    - certificate.tfvar:
-    	Contiene las secciones del certificado del ALB.
 
 ## Para generar la clave pública de nuestro KeyPair utilizar en la ventana de comandos:
 ssh-keygen -y -f /userpath/file.pem
