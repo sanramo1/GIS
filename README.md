@@ -5,7 +5,7 @@
 Despliegue de entorno ArcGIS Enterprise, incluye creación de VPC con 2 subenets públicas y 2 subnets privadas, instancia RDGW (indicar CIDR de acceso RDP), ALB (Incluye Taget groups portal/server), Security Groups (RDGW-EC2-ALB) y asociación de Elastic IP a la máquina de salto e interfaz NAT del RDGW.
 
 __Antes de ejecutar:__ 
-1. Crear Key Pair de acceso para la máquina de salto. 
+1. Crear KeyPair de acceso para la máquina de salto. 
 2. Crear 2 EIPs: una para la NAT GW del stack VPC y otra para RDGW.
 
 ## Ejecución
@@ -38,8 +38,6 @@ __Antes de ejecutar el despliegue adaptar los parámetros y los directorios de t
 
     Ctrl + C (2 veces)
 
-#------------------------------------------------------------------------------------#
-
 __NOTA:__
 Requisito haber creado previamente el KeyPair, Terraform no tiene la capacidad de generaralo, solo de importarlo.
 
@@ -51,6 +49,10 @@ https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-
 
 __IMPORTANTE:__
 La estabilidad de los despliegues y actualizaciones dependen de no hacer cambios fuera de Terraform.
+
+
+#------------------------------------------------------------------------------------#
+
 
 ## Esta versión tiene 6 ficheros .tf y 2 ficheros .tfvars:
 
