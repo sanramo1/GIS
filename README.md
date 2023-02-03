@@ -6,9 +6,7 @@ Despliegue de entorno ArcGIS Enterprise, incluye creación de VPC con 2 subenets
 
 __Antes de ejecutar:__ 
 1. Crear Key Pair de acceso para la máquina de salto. 
-2. Crear 2 EIPs:
-2.1. Para la máquina de salto.
-2.2. Para la interfaz NAT del RDGW, requisito para la creación del stack de la VPC.
+2. Crear 2 EIPs: una para la NAT GW del stack VPC y otra para RDGW.
 
 ## Ejecución
 
